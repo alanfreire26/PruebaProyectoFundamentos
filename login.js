@@ -25,7 +25,4 @@ formulario.addEventListener('submit', (evento) => {
 document.querySelector('#recuperar').addEventListener('click', () => {
   estado.textContent = 'La recuperación de contraseña estará disponible al conectar el servidor.';
 });
-document.querySelector('#registrar').addEventListener('click', () => {
-  estado.textContent = 'La pantalla de registro aún está pendiente de implementar.';
-});
 document.querySelector('#anio').textContent = new Date().getFullYear();

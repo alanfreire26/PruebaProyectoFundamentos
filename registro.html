@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta · Crear cuenta</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="registro.js" defer></script>
+</head>
+<body>
+  <main class="pagina pagina-registro">
+    <section class="presentacion" aria-labelledby="bienvenida">
+      <a class="marca" href="index.html">conecta<span>.</span></a>
+      <p class="etiqueta">UN NUEVO COMIENZO</p>
+      <h1 id="bienvenida">Tus historias.<br>Tu comunidad.<br><span>Tu espacio.</span></h1>
+      <p class="descripcion">Crea tu perfil y empieza a compartir los momentos que te hacen ser tú.</p>
+    </section>
+    <section class="acceso" aria-labelledby="titulo-registro">
+      <div class="panel">
+        <span class="icono" aria-hidden="true">◎</span>
+        <h2 id="titulo-registro">Crea tu cuenta</h2>
+        <p class="subtitulo">Todo empieza con un primer momento.</p>
+        <!-- Solo valida los datos: no los envía ni los guarda. -->
+        <form id="formulario-registro">
+          <label for="usuario">Nombre de usuario</label>
+          <input id="usuario" name="usuario" autocomplete="username" placeholder="Ejemplo: alan.freire" minlength="3" maxlength="30" pattern="[A-Za-z0-9_.]{3,30}" aria-describedby="ayuda-usuario" required>
+          <p class="ayuda" id="ayuda-usuario">De 3 a 30 caracteres: letras sin tildes, números, puntos o guiones bajos.</p>
+
+          <fieldset class="opciones-contacto">
+            <legend>Regístrate con</legend>
+            <label><input type="radio" name="tipo-contacto" value="email" checked> Correo electrónico</label>
+            <label><input type="radio" name="tipo-contacto" value="tel"> Teléfono</label>
+          </fieldset>
+          <label id="etiqueta-contacto" for="contacto">Correo electrónico</label>
+          <input id="contacto" name="contacto" type="email" autocomplete="email" placeholder="tu@correo.com" maxlength="254" aria-describedby="ayuda-contacto" required>
+          <p class="ayuda" id="ayuda-contacto">Introduce un correo con formato válido.</p>
+
+          <label for="nacimiento">Fecha de nacimiento</label>
+          <input id="nacimiento" name="nacimiento" type="date" autocomplete="bday" aria-describedby="ayuda-edad" required>
+          <p class="ayuda" id="ayuda-edad"></p>
+
+          <label for="contrasena">Contraseña</label>
+          <div class="campo-contrasena">
+            <input id="contrasena" name="contrasena" type="password" autocomplete="new-password" placeholder="Crea una contraseña" minlength="8" aria-describedby="reglas-contrasena" required>
+            <button class="mostrar" id="mostrar-contrasena" type="button" aria-controls="contrasena" aria-pressed="false">Mostrar</button>
+          </div>
+          <ul class="reglas" id="reglas-contrasena">
+            <li id="regla-longitud">○ Al menos 8 caracteres</li>
+            <li id="regla-mayuscula">○ Una letra mayúscula</li>
+            <li id="regla-minuscula">○ Una letra minúscula</li>
+            <li id="regla-numero">○ Un número</li>
+          </ul>
+
+          <label for="confirmacion">Confirmar contraseña</label>
+          <input id="confirmacion" name="confirmacion" type="password" autocomplete="new-password" placeholder="Repite tu contraseña" required>
+          <button class="boton-principal crear-cuenta" type="submit">Crear cuenta <span aria-hidden="true">→</span></button>
+          <p id="estado" class="estado" role="status" aria-live="polite"></p>
+        </form>
+        <p class="registro volver-login">¿Ya tienes cuenta? <a class="enlace" href="index.html">Inicia sesión</a></p>
+      </div>
+      <p class="nota-demo">Prototipo de frontend · No se guardan cuentas ni contraseñas</p>
+    </section>
+  </main>
+  <footer>Conecta © <span id="anio"></span> <span class="punto">·</span> Hecho para compartir</footer>
+</body>
+</html>
