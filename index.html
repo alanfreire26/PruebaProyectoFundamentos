@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta · Iniciar sesión</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <main class="pagina">
+    <section class="presentacion" aria-labelledby="titulo-presentacion">
+      <a class="marca" href="index.html">conecta<span>.</span></a>
+      <p class="etiqueta">TUS MOMENTOS. TU GENTE.</p>
+      <h1 id="titulo-presentacion">Lo cotidiano<br>también merece<br><span>compartirse.</span></h1>
+      <p class="descripcion">Un lugar para tus fotos, tus historias y las personas que hacen especial tu día.</p>
+      <div class="escena" aria-hidden="true">
+        <div class="tarjeta tarjeta-atras"><div class="paisaje"><i class="sol"></i><i class="montana"></i></div><div class="linea"></div></div>
+        <div class="tarjeta tarjeta-frente"><div class="mar"><i class="sol"></i><i class="ola"></i></div><div class="pie-foto"><span>♡</span> un momento para recordar</div></div>
+        <span class="burbuja">♡ &nbsp; Conecta con lo que te gusta</span>
+      </div>
+    </section>
+
+    <section class="acceso" aria-labelledby="titulo-login">
+      <div class="panel">
+        <span class="icono" aria-hidden="true">◎</span>
+        <h2 id="titulo-login">Qué bueno verte</h2>
+        <p class="subtitulo">Inicia sesión y sigue compartiendo.</p>
+
+        <!-- El formulario es una demostración; todavía no autentica usuarios. -->
+        <form id="formulario-login">
+          <label for="usuario">Correo o nombre de usuario</label>
+          <input id="usuario" name="usuario" type="text" placeholder="Tu correo o usuario" autocomplete="username" required maxlength="254">
+
+          <label for="contrasena">Contraseña</label>
+          <div class="campo-contrasena">
+            <input id="contrasena" name="contrasena" type="password" placeholder="Tu contraseña" autocomplete="current-password" required>
+            <button class="mostrar" id="mostrar-contrasena" type="button" aria-controls="contrasena" aria-pressed="false">Mostrar</button>
+          </div>
+
+          <button class="enlace recuperar" type="button" id="recuperar">¿Olvidaste tu contraseña?</button>
+          <button class="boton-principal" type="submit">Iniciar sesión <span aria-hidden="true">→</span></button>
+          <p id="estado" class="estado" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="separador"><span></span> TU PRÓXIMA HISTORIA EMPIEZA AQUÍ <span></span></div>
+        <p class="registro">¿Aún no tienes cuenta? <button class="enlace" id="registrar" type="button">Regístrate</button></p>
+      </div>
+      <p class="nota-demo">Prototipo de frontend · Sin conexión al servidor</p>
+    </section>
+  </main>
+  <footer>Conecta © <span id="anio"></span> <span class="punto">·</span> Hecho para compartir</footer>
+</body>
+</html>

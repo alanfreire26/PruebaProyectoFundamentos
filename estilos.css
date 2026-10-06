@@ -1,0 +1,56 @@
+/* HTML organiza los elementos; estas reglas controlan su apariencia. */
+:root { --texto: #222331; --gris: #757584; --acento: #a53672; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background: #faf8f6; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.pagina { min-height: calc(100vh - 64px); max-width: 1120px; margin: auto; padding: 56px 40px 32px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 90px; align-items: center; }
+.marca { display: inline-block; font-size: 34px; font-weight: 800; letter-spacing: -1.6px; text-decoration: none; color: var(--texto); margin-bottom: 45px; }
+.marca span { color: var(--acento); }
+.etiqueta { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--acento); }
+h1 { font-size: clamp(38px, 4.5vw, 54px); line-height: 1.12; letter-spacing: -2px; margin: 19px 0; font-weight: 650; }
+h1 span { color: var(--acento); }
+.descripcion { max-width: 350px; color: var(--gris); font-size: 15px; line-height: 1.7; }
+.escena { position: relative; height: 260px; margin-top: 24px; }
+.tarjeta { position: absolute; padding: 10px; background: white; border-radius: 14px; box-shadow: 0 14px 35px #48302c15; width: 190px; }
+.tarjeta-atras { left: 15px; top: 15px; transform: rotate(-10deg); }
+.tarjeta-frente { left: 185px; top: 42px; transform: rotate(9deg); }
+.paisaje, .mar { position: relative; height: 150px; border-radius: 7px; overflow: hidden; }
+.paisaje { background: linear-gradient(#eaa795, #f6d9b3); }
+.sol { display: block; position: absolute; width: 42px; height: 42px; border-radius: 50%; background: #fff0c9; left: 30px; top: 25px; }
+.montana { position: absolute; width: 190px; height: 140px; background: #b97869; transform: rotate(40deg); left: 45px; top: 80px; border-radius: 20px; }
+.mar { background: linear-gradient(#b5d3ce 55%, #689c9b 55%); }
+.mar .sol { width: 30px; height: 30px; background: #fdf3ce; left: 110px; top: 28px; }
+.ola { position: absolute; width: 240px; height: 75px; bottom: -40px; left: -40px; background: #e9d7ba; border-radius: 50%; transform: rotate(-15deg); }
+.linea { margin: 13px 2px 4px; height: 6px; width: 70%; background: #eee9e5; border-radius: 4px; }
+.pie-foto { font-size: 10px; margin-top: 9px; color: #68616a; }
+.pie-foto span { font-size: 19px; color: var(--acento); margin-right: 4px; }
+.burbuja { position: absolute; bottom: 2px; left: 48px; padding: 13px 19px; border-radius: 30px; background: white; box-shadow: 0 6px 24px #48302c10; font-size: 12px; color: var(--acento); }
+.panel { background: #fff; border: 1px solid #eee9e5; border-radius: 22px; padding: 38px 34px 30px; box-shadow: 0 16px 60px #48302c06; }
+.icono { display: grid; place-items: center; width: 48px; height: 48px; background: #f7edf3; color: var(--acento); border-radius: 14px; font-size: 34px; }
+h2 { font-size: 28px; letter-spacing: -0.9px; margin: 23px 0 7px; }
+.subtitulo { color: var(--gris); font-size: 14px; margin: 0 0 28px; }
+label { display: block; font-size: 12px; font-weight: 600; margin: 18px 0 8px; }
+input { width: 100%; border: 1px solid #dedde3; border-radius: 9px; padding: 13px 14px; background: #fdfcfc; color: var(--texto); font-size: 14px; }
+input::placeholder { color: #8b8994; }
+input:focus { outline: 2px solid #a5367230; border-color: var(--acento); }
+.campo-contrasena { position: relative; }
+.campo-contrasena input { padding-right: 85px; }
+.mostrar { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); padding: 5px; border: 0; background: transparent; color: var(--acento); font-size: 11px; font-weight: 600; }
+.enlace { border: 0; background: transparent; color: var(--acento); padding: 0; font-size: inherit; font-weight: 600; }
+.enlace:hover { text-decoration: underline; }
+.recuperar { display: block; margin: 14px 0 24px auto; font-size: 12px; }
+.boton-principal { display: flex; justify-content: center; align-items: center; gap: 16px; width: 100%; padding: 13px; color: white; border: 0; border-radius: 9px; background: linear-gradient(105deg, #874bbc, #b73b73, #d86857); font-size: 14px; font-weight: 600; box-shadow: 0 6px 16px #a536721f; }
+.boton-principal:hover { filter: brightness(1.08); }
+.boton-principal span { font-size: 20px; }
+.estado { font-size: 12px; line-height: 1.6; color: var(--acento); margin: 0; }
+.estado:not(:empty) { margin-top: 14px; }
+.separador { display: flex; align-items: center; gap: 10px; font-size: 8px; letter-spacing: .8px; color: #92909b; margin: 28px 0 22px; text-align: center; }
+.separador span { flex: 1; height: 1px; background: #eee9e5; }
+.registro { font-size: 13px; text-align: center; margin: 0; color: var(--gris); }
+.nota-demo { font-size: 11px; text-align: center; color: var(--gris); margin-top: 20px; }
+footer { text-align: center; color: var(--gris); font-size: 11px; padding: 22px 16px; }
+.punto { margin: 0 12px; }
+button:focus-visible, a:focus-visible { outline: 3px solid #a5367270; outline-offset: 4px; }
+@media (max-width: 900px) { .pagina { gap: 35px; padding: 35px 24px; } .tarjeta-frente { left: 140px; } .tarjeta { width: 160px; } h1 { font-size: 40px; } .panel { padding: 30px 24px; } }
+@media (max-width: 680px) { .pagina { display: block; max-width: 440px; padding: 28px 20px; min-height: calc(100vh - 64px); } .marca { margin-bottom: 24px; font-size: 30px; } .etiqueta, h1, .descripcion, .escena { display: none; } .panel { padding: 30px 24px; } h2 { font-size: 27px; } }
